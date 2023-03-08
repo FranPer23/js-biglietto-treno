@@ -16,17 +16,22 @@ console.log (userAge, typeof userAge);
 
 const kmPrice = 0.21;
 
-let  ticketPrice = kmPrice * userKm
+let  ticketPriceFull = kmPrice * userKm
+let percentageMin = ticketPriceFull * 20 / 100;
+let percentageMax = ticketPriceFull * 40 / 100;
 
 if (userAge < 18) {
-    ticketPrice = ticketPrice - 20%
+  
+    ticketPrice = ticketPriceFull - percentageMin
 
 } 
 
+
 if (userAge > 65) {
-    ticketPrice = ticketPrice - 40%
+    
+    ticketPrice = ticketPriceFull - percentageMax
 }
 
-let message = `il prezzo è ${ticketPrice}`;
+let message = `il prezzo è ${ticketPrice.toFixed(2)}`;
 
 document.getElementById ('result').innerHTML = message
