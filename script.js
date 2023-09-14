@@ -8,30 +8,24 @@
 
 //prezzo tot viaggio?
 
-const userKm = parseInt (prompt ('Quanti km vuoi percorrere?'));
-console.log (userKm, typeof userKm);
+const userKm = parseInt(prompt("Quanti km vuoi percorrere?"));
+console.log(userKm, typeof userKm);
 
-const userAge = parseInt (prompt('Quanti anni hai?'));
-console.log (userAge, typeof userAge);
+const userAge = parseInt(prompt("Quanti anni hai?"));
+console.log(userAge, typeof userAge);
 
 const kmPrice = 0.21;
 
-let  ticketPriceFull = kmPrice * userKm
-let percentageMin = ticketPriceFull * 20 / 100;
-let percentageMax = ticketPriceFull * 40 / 100;
+const ticketPriceFull = kmPrice * userKm;
+
+let ticketPrice = ticketPriceFull;
 
 if (userAge < 18) {
-  
-    ticketPrice = ticketPriceFull - percentageMin
-
-} 
-
-
-if (userAge > 65) {
-    
-    ticketPrice = ticketPriceFull - percentageMax
+  ticketPrice = ticketPriceFull - (ticketPriceFull * 20) / 100;
+} else if (userAge >= 65) {
+  ticketPrice = ticketPriceFull - (ticketPriceFull * 40) / 100;
 }
 
-let message = `il prezzo è ${ticketPrice.toFixed(2)}`;
+let message = `${ticketPrice.toFixed(2)}`;
 
-document.getElementById ('result').innerHTML = message
+document.getElementById("result").innerHTML = message;

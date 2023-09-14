@@ -1,0 +1,33 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.bg-image {
+  height: 100vh;
+  background-image: url(./assets/treno.jpg);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: center;
+  filter: blur(8px);
+  position: relative;
+}
+
+.ticket {
+  width: 50%;
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  background-color: bisque;
+  font-size: large;
+  position: absolute;
+  top: 50px;
+  left: 430px;
+  text-align: center;
+}
